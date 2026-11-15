@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>محمود عثمان | قانوني متخصص في شؤون الشركات</title>
+<meta name="description" content="محمود عثمان — قانوني متخصص في شؤون الشركات بخبرة تزيد على خمس سنوات في التقاضي وصياغة العقود والامتثال القانوني. Mahmoud Othman — Corporate Legal Professional.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Noto+Kufi+Arabic:wght@500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --primary:#0f3d36;      /* deep emerald */
+    --primary-2:#0a2b26;
+    --primary-3:#15524a;
+    --accent:#b87333;       /* copper */
+    --accent-2:#d9a273;
+    --bg:#f7f5f0;           /* warm ivory */
+    --surface:#ffffff;
+    --soft:#eef0eb;
+    --text:#1c2826;
+    --muted:#5f6b68;
+    --line:rgba(15,61,54,.13);
+    --head:"Noto Kufi Arabic", sans-serif;
+    --body:"IBM Plex Sans Arabic", sans-serif;
+  }
+  html[lang="en"]{
+    --head:"Playfair Display", Georgia, serif;
+    --body:"Inter", system-ui, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--body);color:var(--text);background:var(--bg);font-size:17px;line-height:1.75;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  html[lang="en"] body{line-height:1.65}
+  a{color:inherit}
+  h1,h2,h3,h4{font-family:var(--head);font-weight:600;line-height:1.3}
+  html[lang="en"] h1,html[lang="en"] h2,html[lang="en"] h3,html[lang="en"] h4{line-height:1.15}
+
+  /* language switching: both texts live in the HTML */
+  html[lang="ar"] .en, html[lang="en"] .ar{display:none !important}
+
+  .label{font-size:.78rem;font-weight:600;letter-spacing:.04em;color:var(--accent)}
+  html[lang="en"] .label{letter-spacing:.16em;text-transform:uppercase;font-size:.7rem}
+  .ltr{direction:ltr;unicode-bidi:embed;display:inline-block}
+
+  #progress{position:fixed;top:0;inset-inline-start:0;height:3px;background:var(--accent);width:0;z-index:200}
+
+  /* ================= NAV ================= */
+  nav{position:fixed;top:0;left:0;right:0;z-index:90;display:flex;justify-content:space-between;align-items:center;
+    padding:20px clamp(20px,5vw,72px);color:#fff;transition:background .35s,padding .35s,color .35s,box-shadow .35s}
+  nav.scrolled{background:rgba(247,245,240,.94);backdrop-filter:blur(10px);color:var(--text);padding-top:13px;padding-bottom:13px;box-shadow:0 1px 0 var(--line)}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .brand .mono{width:40px;height:40px;border:1.5px solid var(--accent-2);display:grid;place-items:center;font-family:"Playfair Display",serif;font-weight:700;font-size:1rem;color:var(--accent-2);letter-spacing:.02em}
+  nav.scrolled .brand .mono{border-color:var(--accent);color:var(--accent)}
+  .brand .nm{font-family:var(--head);font-weight:600;font-size:1.02rem}
+  nav ul{display:flex;gap:30px;list-style:none;font-size:.93rem}
+  nav ul a{text-decoration:none;opacity:.85;transition:opacity .2s}
+  nav ul a:hover{opacity:1}
+  .nav-right{display:flex;align-items:center;gap:30px}
+  .lang{display:flex;border:1px solid currentColor;border-radius:999px;overflow:hidden;font-size:.8rem;opacity:.95}
+  .lang button{background:none;border:0;color:inherit;padding:6px 14px;cursor:pointer;font-family:"Inter","IBM Plex Sans Arabic",sans-serif;font-weight:500}
+  .lang button.on{background:var(--accent);color:#fff}
+  @media(max-width:860px){nav ul{display:none}.brand .nm{display:none}}
+
+  /* ================= HERO ================= */
+  .hero{min-height:100vh;position:relative;overflow:hidden;
+    background:linear-gradient(160deg,var(--primary-3) 0%,var(--primary) 45%,var(--primary-2) 100%);color:#fff;
+    display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);align-items:center;gap:60px;
+    padding:140px clamp(20px,6vw,96px) 110px}
+  .hero::after{content:"";position:absolute;inset-inline-end:-18%;top:-30%;width:70vw;height:70vw;border-radius:50%;
+    background:radial-gradient(circle,rgba(217,162,115,.14),transparent 62%);pointer-events:none}
+  @media(max-width:900px){.hero{grid-template-columns:minmax(0,1fr);gap:50px;padding-top:120px}}
+  .hero .label{color:var(--accent-2);display:inline-flex;align-items:center;gap:12px}
+  .hero .label::before{content:"";width:34px;height:1px;background:var(--accent-2)}
+  .hero h1{font-size:clamp(2.8rem,7vw,5.4rem);margin:22px 0 22px;font-weight:700}
+  html[lang="en"] .hero h1{font-weight:600}
+  .hero h1 .accent{color:var(--accent-2)}
+  .hero .lead{font-size:clamp(1.05rem,1.6vw,1.22rem);max-width:600px;color:rgba(255,255,255,.82);font-weight:300}
+  .hero .cta{display:flex;gap:14px;margin-top:38px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:500;font-size:.95rem;padding:14px 28px;border:1px solid transparent;transition:background .25s,color .25s,border-color .25s,transform .25s;cursor:pointer}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{background:#a3622a}
+  .btn-ghost{border-color:rgba(255,255,255,.35);color:#fff}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+  .btn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8}
+  html[dir="rtl"] .btn .arrow{transform:scaleX(-1)}
+
+  .hero-facts{display:flex;gap:44px;margin-top:56px;padding-top:28px;border-top:1px solid rgba(255,255,255,.14);flex-wrap:wrap}
+  .hero-facts b{display:block;font-family:"Playfair Display",serif;font-size:2.3rem;font-weight:600;color:var(--accent-2);line-height:1}
+  .hero-facts span{font-size:.88rem;color:rgba(255,255,255,.65)}
+
+  .emblem{position:relative;justify-self:center;width:min(380px,74vw);aspect-ratio:1}
+  .emblem .ring{position:absolute;inset:0;border-radius:50%;border:1px solid rgba(217,162,115,.35)}
+  .emblem .ring.r2{inset:8%;border-style:dashed;border-color:rgba(255,255,255,.12);animation:spin 80s linear infinite}
+  .emblem .ring.r3{inset:18%;background:rgba(255,255,255,.035);border-color:rgba(255,255,255,.08)}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .emblem svg{position:absolute;inset:26%;width:48%;height:48%;stroke:var(--accent-2);fill:none;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round}
+  .emblem .beam{transform-origin:50px 22px;animation:balance 6s ease-in-out infinite}
+  .emblem .pan{animation:counter 6s ease-in-out infinite}
+  .emblem .pan.l{transform-origin:18px 24px}.emblem .pan.r{transform-origin:82px 24px}
+  @keyframes balance{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+  @keyframes counter{0%,100%{transform:rotate(4deg)}50%{transform:rotate(-4deg)}}
+  .emblem .badge{position:absolute;bottom:6%;inset-inline-start:-4%;background:var(--surface);color:var(--text);padding:14px 18px;box-shadow:0 18px 40px rgba(0,0,0,.25);display:flex;gap:12px;align-items:center;font-size:.85rem;line-height:1.35}
+  .emblem .badge i{width:9px;height:9px;border-radius:50%;background:#2fa36b;box-shadow:0 0 0 4px rgba(47,163,107,.2);flex:none}
+  .emblem .badge strong{display:block;font-weight:600}
+  .emblem .badge small{color:var(--muted)}
+
+  /* ================= SECTIONS ================= */
+  section{padding:110px clamp(20px,6vw,96px)}
+  .sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:60px;align-items:end;margin-bottom:60px}
+  @media(max-width:860px){.sec-head{grid-template-columns:minmax(0,1fr);gap:16px}}
+  .sec-head h2{font-size:clamp(2rem,4vw,2.9rem);margin-top:10px;color:var(--primary)}
+  .sec-head p{color:var(--muted);max-width:560px}
+
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* about */
+  .about{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:70px;align-items:start}
+  @media(max-width:900px){.about{grid-template-columns:minmax(0,1fr);gap:40px}}
+  .about .summary{font-size:clamp(1.15rem,1.8vw,1.38rem);line-height:1.9;color:var(--text);font-weight:400}
+  html[lang="en"] .about .summary{line-height:1.6;font-family:"Playfair Display",serif}
+  .about .summary::before{content:"";display:block;width:56px;height:3px;background:var(--accent);margin-bottom:26px}
+  .info{background:var(--surface);border:1px solid var(--line)}
+  .info div{display:flex;justify-content:space-between;gap:20px;padding:17px 24px;border-bottom:1px solid var(--line);font-size:.95rem}
+  .info div:last-child{border-bottom:0}
+  .info dt{color:var(--muted)}
+  .info dd{font-weight:500;text-align:end}
+
+  /* practice */
+  .practice{background:var(--soft)}
+  .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+  @media(max-width:980px){.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:620px){.grid3{grid-template-columns:minmax(0,1fr)}}
+  .pcard{background:var(--surface);padding:34px 30px;border:1px solid var(--line);position:relative;transition:transform .35s,box-shadow .35s,border-color .35s}
+  .pcard::after{content:"";position:absolute;inset-inline-start:0;top:0;height:3px;width:0;background:var(--accent);transition:width .45s}
+  .pcard:hover{transform:translateY(-6px);box-shadow:0 22px 40px rgba(15,61,54,.1);border-color:transparent}
+  .pcard:hover::after{width:100%}
+  .pcard .ic{width:52px;height:52px;display:grid;place-items:center;background:rgba(184,115,51,.1);margin-bottom:22px}
+  .pcard .ic svg{width:24px;height:24px;stroke:var(--accent);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+  .pcard h3{font-size:1.18rem;color:var(--primary);margin-bottom:10px}
+  .pcard p{color:var(--muted);font-size:.95rem}
+  .pcard .n{position:absolute;top:28px;inset-inline-end:28px;font-family:"Playfair Display",serif;color:rgba(15,61,54,.15);font-size:1.7rem;font-weight:600}
+
+  /* experience */
+  .xp{display:flex;flex-direction:column;gap:30px}
+  .job{display:grid;grid-template-columns:240px minmax(0,1fr);background:var(--surface);border:1px solid var(--line)}
+  @media(max-width:820px){.job{grid-template-columns:minmax(0,1fr)}}
+  .job .side{background:var(--primary);color:#fff;padding:36px 30px;display:flex;flex-direction:column;gap:10px}
+  .job .side .period{font-family:"Playfair Display",serif;font-size:1.45rem;color:var(--accent-2);line-height:1.25}
+  .job .side .co{font-weight:600;font-size:1.05rem}
+  .job .side .sector{font-size:.85rem;color:rgba(255,255,255,.65)}
+  .job .side .status{margin-top:auto;align-self:flex-start;font-size:.78rem;padding:5px 12px;border:1px solid rgba(255,255,255,.3);display:inline-flex;gap:8px;align-items:center}
+  .job .side .status.now i{width:7px;height:7px;border-radius:50%;background:#4ade80}
+  @media(max-width:820px){.job .side .status{margin-top:8px}}
+  .job .main{padding:36px 40px}
+  @media(max-width:600px){.job .main{padding:28px 22px}}
+  .job h3{font-size:1.5rem;color:var(--primary);margin-bottom:18px}
+  .job ul{list-style:none}
+  .job li{position:relative;padding:10px 0;padding-inline-start:28px;border-top:1px solid var(--line);color:#33403d}
+  .job li:first-child{border-top:0}
+  .job li::before{content:"";position:absolute;inset-inline-start:2px;top:22px;width:9px;height:9px;border:2px solid var(--accent);transform:rotate(45deg)}
+  html[lang="en"] .job li::before{top:19px}
+
+  /* timeline */
+  .path{background:var(--primary);color:#fff}
+  .path .sec-head h2{color:#fff}
+  .path .sec-head p{color:rgba(255,255,255,.65)}
+  .path .label{color:var(--accent-2)}
+  .tl{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;padding-top:56px}
+  .tl::before{content:"";position:absolute;top:18px;inset-inline:0;height:1px;background:rgba(255,255,255,.18)}
+  .tl .bar{position:absolute;top:18px;inset-inline-start:0;height:1px;width:0;background:var(--accent-2);transition:width 2s cubic-bezier(.3,.7,.2,1)}
+  .tl.in .bar{width:100%}
+  @media(max-width:760px){.tl{grid-template-columns:minmax(0,1fr);padding-top:0;padding-inline-start:30px;gap:40px}
+    .tl::before,.tl .bar{top:0;bottom:0;inset-inline-start:5px;inset-inline-end:auto;width:1px;height:auto}
+    .tl .bar{height:0;transition:height 2s}.tl.in .bar{width:1px;height:100%}
+    .node::before{top:6px !important;inset-inline-start:-31px !important}}
+  .node{position:relative}
+  .node::before{content:"";position:absolute;top:-43px;inset-inline-start:0;width:11px;height:11px;border-radius:50%;background:var(--primary);border:1.5px solid var(--accent-2)}
+  .node.now::before{background:var(--accent-2);box-shadow:0 0 0 6px rgba(217,162,115,.2)}
+  .node .yr{font-family:"Playfair Display",serif;font-size:2.3rem;color:var(--accent-2);line-height:1}
+  .node h4{font-size:1.12rem;margin:12px 0 4px}
+  .node p{color:rgba(255,255,255,.65);font-size:.95rem}
+
+  /* credentials */
+  .card{background:var(--surface);border:1px solid var(--line);padding:34px 30px}
+  .card .label{display:block;margin-bottom:16px}
+  .card h3{font-size:1.35rem;color:var(--primary)}
+  .card p{color:var(--muted);margin-top:6px}
+  .meter-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+  .meter-row strong{font-weight:600}
+  .meter-row span{font-size:.85rem;color:var(--muted)}
+  .track{height:5px;background:var(--soft);margin-bottom:22px;position:relative;overflow:hidden}
+  .track i{position:absolute;top:0;bottom:0;inset-inline-start:0;width:0;background:linear-gradient(90deg,var(--primary-3),var(--accent));transition:width 1.4s cubic-bezier(.3,.7,.2,1)}
+  html[dir="rtl"] .track i{background:linear-gradient(-90deg,var(--primary-3),var(--accent))}
+  .card.in .track i{width:var(--w)}
+  .interests{list-style:none}
+  .interests li{display:flex;gap:14px;align-items:center;padding:11px 0;border-top:1px solid var(--line)}
+  .interests li:first-child{border-top:0;padding-top:0}
+  .interests svg{width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:1.5;flex:none}
+
+  /* contact */
+  .contact{background:var(--primary-2);color:#fff;padding-top:120px;padding-bottom:120px}
+  .contact-box{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:60px;align-items:center}
+  @media(max-width:900px){.contact-box{grid-template-columns:minmax(0,1fr);gap:40px}}
+  .contact h2{font-size:clamp(2.2rem,5vw,3.6rem);margin:14px 0 18px}
+  .contact h2 .hl{color:var(--accent-2)}
+  .contact .label{color:var(--accent-2)}
+  .contact p{color:rgba(255,255,255,.72);max-width:520px}
+  .channels{display:flex;flex-direction:column;gap:12px}
+  .ch{display:flex;align-items:center;gap:18px;padding:20px 22px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);text-decoration:none;transition:background .25s,border-color .25s,transform .25s}
+  .ch:hover{background:rgba(255,255,255,.08);border-color:var(--accent-2);transform:translateX(0) translateY(-2px)}
+  .ch .ico{width:46px;height:46px;display:grid;place-items:center;background:var(--accent);flex:none}
+  .ch .ico svg{width:21px;height:21px;stroke:#fff;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .ch small{display:block;color:rgba(255,255,255,.55);font-size:.8rem}
+  .ch strong{font-weight:500;font-size:1rem;word-break:break-all}
+  .ch .go{margin-inline-start:auto;opacity:.5}
+  .copy{background:none;border:1px solid rgba(255,255,255,.2);color:#fff;padding:9px 16px;font:inherit;font-size:.85rem;cursor:pointer;align-self:flex-start;margin-top:4px}
+  .copy:hover{border-color:var(--accent-2)}
+
+  footer{background:var(--primary-2);color:rgba(255,255,255,.45);border-top:1px solid rgba(255,255,255,.08);padding:24px clamp(20px,6vw,96px);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.85rem}
+
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{animation:none!important;transition:none!important}
+    .reveal{opacity:1;transform:none}
+    .tl .bar{width:100%}.track i{width:var(--w)}
+  }
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<!-- ================= NAV ================= -->
+<nav id="nav">
+  <a href="#top" class="brand">
+    <span class="mono">MO</span>
+    <span class="nm"><span class="ar">محمود عثمان</span><span class="en">Mahmoud Othman</span></span>
+  </a>
+  <div class="nav-right">
+    <ul>
+      <li><a href="#about"><span class="ar">نبذة</span><span class="en">About</span></a></li>
+      <li><a href="#practice"><span class="ar">مجالات العمل</span><span class="en">Practice</span></a></li>
+      <li><a href="#experience"><span class="ar">الخبرات</span><span class="en">Experience</span></a></li>
+      <li><a href="#credentials"><span class="ar">المؤهلات</span><span class="en">Credentials</span></a></li>
+      <li><a href="#contact"><span class="ar">تواصل</span><span class="en">Contact</span></a></li>
+    </ul>
+    <div class="lang" role="group" aria-label="Language">
+      <button data-lang="ar" class="on">ع</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <div>
+    <span class="label"><span class="ar">قانوني متخصص في شؤون الشركات</span><span class="en">Corporate Legal Professional</span></span>
+    <h1>
+      <span class="ar">محمود <span class="accent">عثمان</span></span>
+      <span class="en">Mahmoud <span class="accent">Othman</span></span>
+    </h1>
+    <p class="lead">
+      <span class="ar">خبرة عملية تزيد على خمس سنوات في التقاضي وصياغة العقود والشؤون التنظيمية والامتثال القانوني، في قطاعي التطوير العقاري والاستشارات القانونية.</span>
+      <span class="en">Over five years of hands-on experience in litigation, contract drafting, regulatory affairs and legal compliance across real estate and legal consulting.</span>
+    </p>
+    <div class="cta">
+      <a href="#contact" class="btn btn-primary">
+        <span class="ar">تواصل معي</span><span class="en">Get in touch</span>
+        <svg class="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="#experience" class="btn btn-ghost"><span class="ar">الخبرات العملية</span><span class="en">View experience</span></a>
+    </div>
+    <div class="hero-facts">
+      <div><b><span class="ar">+5</span><span class="en">5+</span></b><span><span class="ar">سنوات خبرة</span><span class="en">Years of practice</span></span></div>
+      <div><b>2020</b><span><span class="ar">ليسانس الحقوق – جامعة حلوان</span><span class="en">LL.B. — Helwan University</span></span></div>
+      <div><b>2</b><span><span class="ar">لغتان: العربية والإنجليزية</span><span class="en">Languages: Arabic &amp; English</span></span></div>
+    </div>
+  </div>
+
+  <div class="emblem" aria-hidden="true">
+    <div class="ring"></div><div class="ring r2"></div><div class="ring r3"></div>
+    <svg viewBox="0 0 100 100">
+      <path d="M50 14v72M34 86h32M40 86l4-6h12l4 6"/>
+      <circle cx="50" cy="12" r="3"/>
+      <g class="beam">
+        <path d="M14 22h72"/>
+        <g class="pan l"><path d="M18 22l-9 24M18 22l9 24M6 46h24a12 6 0 0 1-24 0z"/></g>
+        <g class="pan r"><path d="M82 22l-9 24M82 22l9 24M70 46h24a12 6 0 0 1-24 0z"/></g>
+      </g>
+    </svg>
+    <div class="badge">
+      <i></i>
+      <div>
+        <strong><span class="ar">يعمل حاليًا</span><span class="en">Currently at</span></strong>
+        <small>MG Developments</small>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="sec-head reveal">
+    <div>
+      <span class="label"><span class="ar">01 — نبذة مهنية</span><span class="en">01 — Profile</span></span>
+      <h2><span class="ar">نبذة عني</span><span class="en">About me</span></h2>
+    </div>
+  </div>
+  <div class="about">
+    <p class="summary reveal">
+      <span class="ar">قانوني متخصص في شؤون الشركات بخبرة عملية تزيد على خمس سنوات في التقاضي وصياغة العقود والشؤون التنظيمية والامتثال القانوني. أمتلك قدرة مثبتة على دعم الإدارات القانونية في بيئات التطوير العقاري والاستشارات، من خلال توثيق قانوني منظم، والتمثيل أمام المحاكم، والتنسيق مع الجهات الحكومية.</span>
+      <span class="en">Corporate legal professional with over five years of hands-on experience in litigation, contract drafting, regulatory affairs and legal compliance. Proven ability to support legal departments in real estate and consulting environments through structured legal documentation, court representation and coordination with governmental authorities.</span>
+    </p>
+    <dl class="info reveal">
+      <div><dt><span class="ar">المسمى الحالي</span><span class="en">Current role</span></dt><dd><span class="ar">مساعد مدير الإدارة القانونية</span><span class="en">Assistant to Legal Dept. Manager</span></dd></div>
+      <div><dt><span class="ar">جهة العمل</span><span class="en">Company</span></dt><dd>MG Developments</dd></div>
+      <div><dt><span class="ar">المؤهل</span><span class="en">Degree</span></dt><dd><span class="ar">ليسانس الحقوق – 2020</span><span class="en">Bachelor of Law — 2020</span></dd></div>
+      <div><dt><span class="ar">الجامعة</span><span class="en">University</span></dt><dd><span class="ar">جامعة حلوان</span><span class="en">Helwan University</span></dd></div>
+      <div><dt><span class="ar">الهاتف</span><span class="en">Phone</span></dt><dd><span class="ltr">+20 102 089 3896</span></dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ================= PRACTICE ================= -->
+<section class="practice" id="practice">
+  <div class="sec-head reveal">
+    <div>
+      <span class="label"><span class="ar">02 — المهارات القانونية</span><span class="en">02 — Core Legal Skills</span></span>
+      <h2><span class="ar">مجالات العمل</span><span class="en">Practice areas</span></h2>
+    </div>
+    <p><span class="ar">مهارات قانونية متكاملة تغطي دورة العمل القانوني داخل الشركة، من صياغة العقد إلى المرافعة أمام المحكمة.</span><span class="en">A complete in-house legal skill set — from drafting the contract to arguing the case in court.</span></p>
+  </div>
+  <div class="grid3">
+    <article class="pcard reveal"><span class="n">01</span>
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></div>
+      <h3><span class="ar">صياغة العقود والتفاوض</span><span class="en">Contract drafting &amp; negotiation</span></h3>
+      <p><span class="ar">صياغة العقود ومراجعتها والتفاوض عليها، بما في ذلك عقود العملاء والمقاولين وعقود العمل.</span><span class="en">Drafting, reviewing and negotiating contracts, including client, contractor and employment agreements.</span></p>
+    </article>
+    <article class="pcard reveal"><span class="n">02</span>
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M14.5 4.5l5 5M12 7l5 5M9.5 9.5l5 5-3 3-5-5zM4 20l5.5-5.5"/><path d="M3 21h8"/></svg></div>
+      <h3><span class="ar">التقاضي</span><span class="en">Litigation</span></h3>
+      <p><span class="ar">مباشرة القضايا أمام المحاكم بمختلف درجاتها، ومتابعتها حتى صدور الحكم.</span><span class="en">Handling cases before different court levels and following them through to resolution.</span></p>
+    </article>
+    <article class="pcard reveal"><span class="n">03</span>
+      <div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/></svg></div>
+      <h3><span class="ar">البحث القانوني وإعداد الملفات</span><span class="en">Legal research &amp; case files</span></h3>
+      <p><span class="ar">البحث والتحليل القانوني، وإعداد ملفات القضايا بشكل متكامل ومنظم.</span><span class="en">Legal research, analysis and complete, well-organised case file preparation.</span></p>
+    </article>
+    <article class="pcard reveal"><span class="n">04</span>
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <h3><span class="ar">الامتثال التنظيمي</span><span class="en">Regulatory compliance</span></h3>
+      <p><span class="ar">ضمان الامتثال للمتطلبات التنظيمية، وإعداد التوثيق القانوني ومتابعة المواعيد.</span><span class="en">Regulatory compliance, legal documentation and tracking of deadlines and requirements.</span></p>
+    </article>
+    <article class="pcard reveal"><span class="n">05</span>
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10M19 21V10M9 21v-7M15 21v-7M2 10l10-6 10 6z"/></svg></div>
+      <h3><span class="ar">حوكمة الشركات</span><span class="en">Corporate governance</span></h3>
+      <p><span class="ar">تطبيق قواعد الحوكمة والإجراءات القانونية الداخلية داخل الشركة.</span><span class="en">Corporate governance and internal legal procedures within the company.</span></p>
+    </article>
+    <article class="pcard reveal"><span class="n">06</span>
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v12H8l-4 4z"/><path d="M8 9h8M8 12h5"/></svg></div>
+      <h3><span class="ar">التمثيل أمام الجهات</span><span class="en">Representation &amp; authorities</span></h3>
+      <p><span class="ar">التعامل مع الجهات الحكومية وغير الحكومية، والتمثيل القانوني والمتابعة المهنية.</span><span class="en">Dealing with governmental and non-governmental authorities, legal representation and follow-up.</span></p>
+    </article>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience">
+  <div class="sec-head reveal">
+    <div>
+      <span class="label"><span class="ar">03 — الخبرات العملية</span><span class="en">03 — Professional Experience</span></span>
+      <h2><span class="ar">الخبرات</span><span class="en">Experience</span></h2>
+    </div>
+  </div>
+  <div class="xp">
+    <article class="job reveal">
+      <div class="side">
+        <div class="period"><span class="ar">يناير 2025 – حتى الآن</span><span class="en">Jan 2025 – Present</span></div>
+        <div class="co">MG Developments</div>
+        <div class="sector"><span class="ar">التطوير العقاري</span><span class="en">Real estate development</span></div>
+        <span class="status now"><i></i><span class="ar">الوظيفة الحالية</span><span class="en">Current role</span></span>
+      </div>
+      <div class="main">
+        <h3><span class="ar">مساعد مدير الإدارة القانونية</span><span class="en">Assistant to Legal Department Manager</span></h3>
+        <ul class="ar">
+          <li>دعم مدير الإدارة القانونية في الشؤون القانونية للشركة ووضع استراتيجية التقاضي</li>
+          <li>مباشرة القضايا أمام مختلف المحاكم والجهات</li>
+          <li>صياغة ومراجعة العقود مع العملاء والمقاولين، وعقود العمل</li>
+          <li>تمثيل الشركة أمام المحاكم وإعداد ملفات القضايا كاملة حتى انتهائها</li>
+          <li>استخراج التصاريح والتراخيص والتنسيق مع الهيئة العامة للاستثمار والمناطق الحرة (GAFI)</li>
+          <li>متابعة الامتثال القانوني والمواعيد والمتطلبات التنظيمية</li>
+        </ul>
+        <ul class="en">
+          <li>Supporting the Legal Department Manager in corporate legal matters and litigation strategy</li>
+          <li>Handling litigation before various courts and authorities</li>
+          <li>Drafting and reviewing contracts with clients, contractors, and employment agreements</li>
+          <li>Representing the company before courts and preparing complete case files until resolution</li>
+          <li>Obtaining permits and licenses and coordinating with the Egyptian Investment Authority (GAFI)</li>
+          <li>Monitoring legal compliance, deadlines, and regulatory requirements</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="job reveal">
+      <div class="side">
+        <div class="period">2022 – 2024</div>
+        <div class="co">United Legal Consultations</div>
+        <div class="sector"><span class="ar">الاستشارات القانونية</span><span class="en">Legal consulting</span></div>
+      </div>
+      <div class="main">
+        <h3><span class="ar">مستشار قانوني</span><span class="en">Legal Advisor</span></h3>
+        <ul class="ar">
+          <li>صياغة العقود وتقديم الاستشارات القانونية للشركات والأفراد</li>
+          <li>مباشرة القضايا والتفاوض والمسائل المتعلقة بالعلامات التجارية</li>
+          <li>التنسيق مع الجهات الحكومية في إجراءات التراخيص والإجراءات التنظيمية</li>
+          <li>إدارة التراخيص السياحية والصناعية والتجارية</li>
+        </ul>
+        <ul class="en">
+          <li>Drafted contracts and provided legal consultations to corporate and individual clients</li>
+          <li>Handled litigation, negotiation, and trademark-related matters</li>
+          <li>Coordinated with governmental entities for licensing and regulatory procedures</li>
+          <li>Managed tourism, industrial, and commercial licenses</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= CAREER PATH ================= -->
+<section class="path">
+  <div class="sec-head reveal">
+    <div>
+      <span class="label"><span class="ar">04 — المسار المهني</span><span class="en">04 — Career Path</span></span>
+      <h2><span class="ar">المسيرة المهنية</span><span class="en">Career timeline</span></h2>
+    </div>
+  </div>
+  <div class="tl reveal">
+    <div class="bar"></div>
+    <div class="node"><div class="yr">2020</div>
+      <h4><span class="ar">ليسانس الحقوق</span><span class="en">Bachelor of Law</span></h4>
+      <p><span class="ar">التخرج من كلية الحقوق – جامعة حلوان</span><span class="en">Graduated from Helwan University</span></p></div>
+    <div class="node"><div class="yr">2022</div>
+      <h4><span class="ar">مستشار قانوني</span><span class="en">Legal Advisor</span></h4>
+      <p>United Legal Consultations</p></div>
+    <div class="node now"><div class="yr">2025</div>
+      <h4><span class="ar">مساعد مدير الإدارة القانونية</span><span class="en">Assistant to Legal Dept. Manager</span></h4>
+      <p>MG Developments</p></div>
+  </div>
+</section>
+
+<!-- ================= CREDENTIALS ================= -->
+<section id="credentials">
+  <div class="sec-head reveal">
+    <div>
+      <span class="label"><span class="ar">05 — التعليم واللغات</span><span class="en">05 — Education &amp; Languages</span></span>
+      <h2><span class="ar">المؤهلات</span><span class="en">Credentials</span></h2>
+    </div>
+  </div>
+  <div class="grid3">
+    <div class="card reveal">
+      <span class="label"><span class="ar">التعليم</span><span class="en">Education</span></span>
+      <h3><span class="ar">ليسانس الحقوق</span><span class="en">Bachelor's Degree in Law</span></h3>
+      <p><span class="ar">جامعة حلوان – 2020</span><span class="en">Helwan University — 2020</span></p>
+    </div>
+    <div class="card reveal">
+      <span class="label"><span class="ar">اللغات</span><span class="en">Languages</span></span>
+      <div class="meter-row"><strong><span class="ar">العربية</span><span class="en">Arabic</span></strong><span><span class="ar">طلاقة</span><span class="en">Fluent</span></span></div>
+      <div class="track"><i style="--w:100%"></i></div>
+      <div class="meter-row"><strong><span class="ar">الإنجليزية</span><span class="en">English</span></strong><span><span class="ar">جيد</span><span class="en">Good</span></span></div>
+      <div class="track"><i style="--w:70%"></i></div>
+    </div>
+    <div class="card reveal">
+      <span class="label"><span class="ar">الاهتمامات</span><span class="en">Interests</span></span>
+      <ul class="interests">
+        <li><svg viewBox="0 0 24 24"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2zM22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span><span class="ar">القراءة القانونية والتطوير المهني المستمر</span><span class="en">Legal reading &amp; continuous development</span></span></li>
+        <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg><span><span class="ar">الرياضة والأنشطة البدنية</span><span class="en">Sports &amp; physical activities</span></span></li>
+        <li><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 20c0-2 1-4 3-4s3 2 3 4"/></svg><span><span class="ar">المشاركة المجتمعية</span><span class="en">Community engagement</span></span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <div class="contact-box">
+    <div class="reveal">
+      <span class="label"><span class="ar">06 — تواصل</span><span class="en">06 — Contact</span></span>
+      <h2><span class="ar">لنعمل <span class="hl">معًا</span></span><span class="en">Let's work <span class="hl">together</span></span></h2>
+      <p><span class="ar">متاح للفرص الوظيفية في الإدارات القانونية للشركات، وصياغة العقود، وتقديم الاستشارات القانونية.</span><span class="en">Available for in-house legal roles, contract work and legal consultations.</span></p>
+    </div>
+    <div class="channels reveal">
+      <a class="ch" href="mailto:Mahmoudosmanhmam233@gmail.com">
+        <span class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg></span>
+        <span><small><span class="ar">البريد الإلكتروني</span><span class="en">Email</span></small><strong class="ltr">Mahmoudosmanhmam233@gmail.com</strong></span>
+      </a>
+      <a class="ch" href="tel:+201020893896">
+        <span class="ico"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span>
+        <span><small><span class="ar">الهاتف</span><span class="en">Phone</span></small><strong class="ltr">+20 102 089 3896</strong></span>
+      </a>
+      <a class="ch" href="https://wa.me/201020893896" target="_blank" rel="noopener">
+        <span class="ico"><svg viewBox="0 0 24 24"><path d="M3 21l1.6-4.7A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8a4 4 0 0 1-1.8-1.8l.8-1-1-2z"/></svg></span>
+        <span><small>WhatsApp</small><strong><span class="ar">راسلني على واتساب</span><span class="en">Message on WhatsApp</span></strong></span>
+      </a>
+      <button class="copy" id="copyEmail"><span class="ar">نسخ البريد الإلكتروني</span><span class="en">Copy email address</span></button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© <span id="yr"></span> <span class="ar">محمود عثمان</span><span class="en">Mahmoud Othman</span></span>
+  <span><span class="ar">جميع الحقوق محفوظة</span><span class="en">All rights reserved</span></span>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // ---------- language ----------
+  const titles = {
+    ar: 'محمود عثمان | قانوني متخصص في شؤون الشركات',
+    en: 'Mahmoud Othman | Corporate Legal Professional'
+  };
+  function setLang(l){
+    const root = document.documentElement;
+    root.lang = l; root.dir = l === 'ar' ? 'rtl' : 'ltr';
+    document.title = titles[l];
+    document.querySelectorAll('.lang button').forEach(b => b.classList.toggle('on', b.dataset.lang === l));
+    try { localStorage.setItem('lang', l); } catch(e){}
+  }
+  document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+  let saved = 'ar';
+  try { saved = localStorage.getItem('lang') || 'ar'; } catch(e){}
+  if (location.hash === '#en') saved = 'en';
+  setLang(saved);
+
+  // ---------- nav + progress ----------
+  const nav = document.getElementById('nav'), prog = document.getElementById('progress');
+  function onScroll(){
+    nav.classList.toggle('scrolled', scrollY > innerHeight * .75);
+    const h = document.documentElement.scrollHeight - innerHeight;
+    prog.style.width = (h > 0 ? scrollY / h * 100 : 0) + '%';
+  }
+  addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  // ---------- reveal ----------
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el => {
+    const sibs = [...el.parentElement.children].filter(c => c.classList.contains('reveal'));
+    if (el.parentElement.classList.contains('grid3')) el.style.transitionDelay = (sibs.indexOf(el) % 3) * .1 + 's';
+    io.observe(el);
+  });
+
+  // ---------- copy email ----------
+  const copyBtn = document.getElementById('copyEmail');
+  copyBtn.addEventListener('click', () => {
+    const original = copyBtn.innerHTML;
+    const done = () => {
+      copyBtn.innerHTML = '<span class="ar">تم النسخ ✓</span><span class="en">Copied ✓</span>';
+      setTimeout(() => copyBtn.innerHTML = original, 2200);
+    };
+    if (navigator.clipboard) navigator.clipboard.writeText('Mahmoudosmanhmam233@gmail.com').then(done).catch(done);
+  });
+</script>
+</body>
+</html>
